@@ -145,7 +145,7 @@ class RootCommand(Feature):
         # Show websocket latency in milliseconds
         summary.append(f"Average websocket latency: {round(self.bot.latency * 1000, 2)}ms")
 
-        await ctx.reply(embed = discord.Embed(description = "\n".join(summary), color = 0xf3136),mention_author = False)
+        await ctx.reply(embed = discord.Embed(description = "\n".join(summary), color = self.bot.theme),mention_author = False)
 
     # pylint: disable=no-member
     @Feature.Command(parent="jsk", name="hide")
